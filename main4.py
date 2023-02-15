@@ -6,9 +6,10 @@ tanulok = []
 
 while True:
     print("\nKérem a tanukó adatait:")
-    nev=input("Tanulo neve")
-    szid=input("Születési idő: ")
-    magassag= int(input("Magassag: "))
+    tanulo={}
+    tanulo["nev"]=input("Tanulo neve: ")
+    tanulo["szid"]=input("Születési idő: ")
+    tanulo["magassag"]= int(input("Magassag: "))
 
     tanulo = (nev, szid, magassag)
     tanulok.append(tanulo)
@@ -20,6 +21,6 @@ while True:
 #3feldolgozás listaelem indexe segítségével
 i=0
 while i<len(tanulok):
-    print(f"Tanuló neve: {tanulok[i][0]}, születési ideje:{tanulok[i][1]}, magasság:{tanulok[i][2]}")
+    print(f'{i+1}. - Tanuló neve: {tanulok[i]["nev"]}, születési ideje:{tanulok[i]["szid"]}, magasság:{tanulok[i]["magassag"]}')
    
     i+=1
